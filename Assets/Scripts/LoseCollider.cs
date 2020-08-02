@@ -7,8 +7,7 @@ public class LoseCollider : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject game = GameObject.Find("Ball");
-        Ball ball = game.GetComponent<Ball>();
+        Ball ball = FindObjectOfType<Ball>();
 
         if (ball.hasStarted)
         {
